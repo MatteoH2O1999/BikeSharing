@@ -89,7 +89,7 @@ public class CreditCard {
             throw new RuntimeException("Error in gathering current date");
         }
         CreditCardExpirationDate currentDate = new CreditCardExpirationDate(localdate.getYear(), localdate.getMonthValue() - 1);
-        if (this.expirationDate.compareTo(currentDate) == -1) {
+        if (this.expirationDate.compareTo(currentDate) < 0) {
             return false;
         }
         return BankAPI.checkCreditCard(this);

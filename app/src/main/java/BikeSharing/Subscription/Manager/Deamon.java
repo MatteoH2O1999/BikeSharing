@@ -61,6 +61,9 @@ public class Deamon extends Thread {
             if (lastRent.startRent == null) {
                 continue;
             }
+            if (lastRent.endRent != null) {
+                continue;
+            }
             long startMillis = lastRent.startRent.getTimeInMillis();
             long currentMillis = new GregorianCalendar().getTimeInMillis();
             long intervalHours = TimeUnit.MILLISECONDS.toHours(currentMillis - startMillis);
