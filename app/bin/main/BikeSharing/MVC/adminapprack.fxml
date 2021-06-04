@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BikeSharing.MVC.AdminAppRackController">
+   <children>
+      <HBox alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER" spacing="25.0">
+               <children>
+                  <TextField fx:id="rackNameText" maxWidth="1.7976931348623157E308" prefWidth="300.0" promptText="Rack Name" />
+                  <Separator prefWidth="200.0" />
+                  <ChoiceBox fx:id="selectedRack" maxWidth="1.7976931348623157E308" />
+                  <TextField fx:id="editedNameText" promptText="New Rack Name" />
+                  <ChoiceBox fx:id="selectedClampType" maxWidth="1.7976931348623157E308" />
+                  <Separator prefWidth="200.0" />
+                  <ChoiceBox fx:id="selectedClamp" maxWidth="1.7976931348623157E308" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" spacing="25.0">
+               <children>
+                  <Button fx:id="createRackButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#createRack" text="Create Rack">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Separator prefWidth="200.0" />
+                  <Button fx:id="deleteRackButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#deleteRack" text="Delete Rack">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="changeRackNameButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#changeRackName" text="Change Rack Name">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="createClampButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#createClamp" text="Create Clamp">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Separator prefWidth="200.0" />
+                  <Button fx:id="deleteClampButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#deleteClamp" text="Delete Clamp">
+                     <VBox.margin>
+                        <Insets left="30.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+      </HBox>
+   </children>
+</Pane>

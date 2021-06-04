@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BikeSharing.MVC.DataAppController">
+   <children>
+      <HBox>
+         <children>
+            <VBox alignment="CENTER" spacing="30.0">
+               <children>
+                  <TextField fx:id="rentPath" maxWidth="300.0" prefWidth="300.0" promptText="Rent Data Directory" />
+                  <TextField fx:id="subscriptionPath" maxWidth="300.0" prefWidth="300.0" promptText="Subscription Data Directory" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" spacing="30.0">
+               <children>
+                  <Button fx:id="rentDirectoryChooser" mnemonicParsing="false" onAction="#chooseRentDirectory" text="..." />
+                  <Button fx:id="subscriptionDirectoryChooser" mnemonicParsing="false" onAction="#chooseSubscriptionDirectory" text="..." />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" spacing="30.0">
+               <children>
+                  <Button fx:id="writeRentDataButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#writeRentData" text="Write Rent Data" />
+                  <Button fx:id="writeSubscriptionDataButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#writeSubscriptionData" text="Write Subscription Data" />
+               </children>
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+         </padding>
+      </HBox>
+   </children>
+</Pane>

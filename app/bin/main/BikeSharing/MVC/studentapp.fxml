@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="40.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BikeSharing.MVC.StudentAppController">
+   <children>
+      <CheckBox fx:id="studentBool" mnemonicParsing="false" text="Are you a student?" />
+      <Button fx:id="submitButton" mnemonicParsing="false" onAction="#submit" text="Submit" />
+   </children>
+   <padding>
+      <Insets bottom="60.0" left="60.0" right="60.0" top="60.0" />
+   </padding>
+</VBox>

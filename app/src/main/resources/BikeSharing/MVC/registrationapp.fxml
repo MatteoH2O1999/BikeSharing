@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+
+<Pane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BikeSharing.MVC.RegistrationAppController">
+   <children>
+      <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0">
+         <children>
+            <GridPane hgap="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" vgap="20.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" />
+                  <ColumnConstraints hgrow="SOMETIMES" />
+                  <ColumnConstraints hgrow="SOMETIMES" />
+                  <ColumnConstraints hgrow="SOMETIMES" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Credit Card Number" GridPane.rowIndex="1" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="CVV" GridPane.rowIndex="2" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Card Expiration Date" GridPane.rowIndex="3" />
+                  <PasswordField fx:id="passwordText" maxWidth="1.7976931348623157E308" onKeyTyped="#updatePassword" promptText="Password" GridPane.columnIndex="1" />
+                  <TextField fx:id="cardNumberText" maxWidth="1.7976931348623157E308" onKeyTyped="#updateCardNumber" promptText="Card Number" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="cvvText" maxWidth="1.7976931348623157E308" onKeyTyped="#updateCvv" promptText="CVV" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <DatePicker fx:id="cardExpirationDate" maxWidth="1.7976931348623157E308" onAction="#updateExpiration" promptText="Card Expiration Date" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="User Type" GridPane.rowIndex="4" />
+                  <ChoiceBox fx:id="selectedUserType" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Text fx:id="passwordStatus" strokeType="OUTSIDE" strokeWidth="0.0" text="Required Field" GridPane.columnIndex="2" />
+                  <Text fx:id="cardNumberStatus" strokeType="OUTSIDE" strokeWidth="0.0" text="Required Field" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Text fx:id="cvvStatus" strokeType="OUTSIDE" strokeWidth="0.0" text="Required Field" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Text fx:id="expirationStatus" strokeType="OUTSIDE" strokeWidth="0.0" text="Required Field" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Text fx:id="userStatus" strokeType="OUTSIDE" strokeWidth="0.0" text="Required Field" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Subscription Type" GridPane.rowIndex="5" />
+                  <ChoiceBox fx:id="selectedSubscriptionType" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Text fx:id="subscriptionStatus" strokeType="OUTSIDE" strokeWidth="0.0" text="Required Field" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+            <Button fx:id="submitButton" mnemonicParsing="false" onAction="#submit" text="Submit" />
+         </children>
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+      </VBox>
+   </children>
+</Pane>
