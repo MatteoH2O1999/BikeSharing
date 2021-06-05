@@ -43,5 +43,23 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'BikeSharing.MVC.MainApp'
+    mainClass = 'BikeSharing.MVC.Launcher'
+}
+
+jar {
+    manifest {
+        archivesBaseName = 'BikeSharing'
+        attributes (
+            'Main-Class': 'BikeSharing.MVC.Launcher'
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+distributions {
+    main {
+        distributionBaseName = 'BikeSharing'
+    }
 }
