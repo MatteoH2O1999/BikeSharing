@@ -18,7 +18,7 @@ public class DBConnection {
     public static Connection getDBConnection() {
         Connection connection;
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/?user=root&password=bikesharing");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/?user=bikeSharingSystem&password=bikesharing");
         } catch (SQLException e) {
             e.printStackTrace();
             throw new RuntimeException("Impossible to connect with database");
